@@ -1,7 +1,7 @@
 # Reduce coupling in this code:
-# - extending collection classes (or any classnot explicitly
-#   meant to be extended) is seldom a good idea.
-# - add a method to return a member by name  'member_named(name)'
+# - extending collection classes (or any class not explicitly
+#   meant to be extended) is seldom a good idea. Fix this.
+# - add a method to return a member by name 'member_named(name)'
 # - refactor to make name lookup more efficient
 # - add country to Member and make old_enough_to_drink? vary based on
 #   country:
@@ -62,7 +62,7 @@ roster << Member.new("Bob", "White", 19)
 roster << Member.new("Mary", "Smith", 23)
 
 puts "\nOld enough to drive:"
-roster.old_enough_to_drive.each {|m| puts m.name}
+roster.old_enough_to_drive.each {|m| puts m.to_s}
 
 puts "\nOld enough to drink:"
-roster.old_enough_to_drink.each {|m| puts m.name}
+roster.old_enough_to_drink.each {|m| puts m.to_s}
